@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "primeicons/primeicons.css";
+
+.bg-surface-100 {
+  background-color: var(--surface-100);
+}
+
+.bg-surface-card {
+  background-color: var(--surface-card);
+}
+
+.text-color {
+  color: var(--text-color);
+}
+
+.text-color-secondary {
+  color: var(--text-color-secondary);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}

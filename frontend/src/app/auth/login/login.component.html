@@ -1,0 +1,44 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100">
+  <div class="w-full max-w-md p-8 shadow-md rounded-lg bg-white">
+    <h2 class="text-2xl font-semibold text-center text-color mb-2">Log in</h2>
+    <p class="text-sm text-center text-color-secondary mb-6">
+      Need an account?
+      <a routerLink="/auth/signup" class="text-primary hover:underline"
+        >Create one</a
+      >
+    </p>
+
+    <div class="space-y-4">
+      <div>
+        <label for="username" class="block text-sm font-medium text-color mb-1"
+          >Username or Email</label
+        >
+        <input id="username" pInputText [(ngModel)]="username" class="w-full" />
+      </div>
+
+      <div>
+        <label for="password" class="block text-sm font-medium text-color mb-1"
+          >Password</label
+        >
+        <input
+          id="password"
+          type="password"
+          pPassword
+          [(ngModel)]="password"
+          class="w-full"
+          [feedback]="false"
+        />
+      </div>
+
+      <button pButton label="Log in" class="w-full" (click)="login()"></button>
+
+      <div class="flex justify-end text-sm mt-2 text-gray-600">
+        <a
+          routerLink="/auth/forgot-password"
+          class="text-primary hover:underline"
+          >Forgot password?</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

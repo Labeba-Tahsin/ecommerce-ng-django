@@ -14,6 +14,7 @@ import { ButtonModule } from 'primeng/button';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideRouter(routes),
     provideAnimationsAsync(),
     providePrimeNG({
       theme: {

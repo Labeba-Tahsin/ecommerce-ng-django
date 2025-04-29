@@ -1,0 +1,52 @@
+<div class="min-h-screen bg-gray-100 p-16">
+  <div class="flex flex-col md:flex-row gap-6">
+    <!-- Sidebar Menu -->
+    <div class="w-full md:w-64 shrink-0">
+      <p-megamenu
+        [model]="items"
+        orientation="vertical"
+        styleClass="w-full !m-0 !p-0 rounded-md shadow-md"
+      ></p-megamenu>
+    </div>
+
+    <!-- Product Grid -->
+    <div
+      class="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6"
+    >
+      <ng-container *ngFor="let product of products">
+        <p-card
+          class="shadow-md cursor-pointer hover:ring-2 hover:ring-primary transition"
+          (click)="goToDetail(product.id)"
+        >
+          <ng-template pTemplate="header">
+            <img
+              [src]="product.image"
+              alt="product image"
+              class="w-full h-40 object-cover rounded-md"
+            />
+          </ng-template>
+          <div class="mt-2 space-y-2">
+            <h4 class="text-lg font-medium text-color">{{ product.title }}</h4>
+            <p class="text-sm text-color-secondary">{{ product.price }}</p>
+            <div class="flex gap-2">
+              <button
+                pButton
+                icon="pi pi-shopping-cart"
+                label="Add to Cart"
+                class="w-full"
+                (click)="addToCart($event, product)"
+              ></button>
+              <button
+                pButton
+                icon="pi pi-heart"
+                label="Wishlist"
+                class="w-full p-button-outlined"
+                (click)="addToWishlist($event, product)"
+              ></button>
+            </div>
+          </div>
+        </p-card>
+      </ng-container>
+    </div>
+  </div>
+</div>
