@@ -15,6 +15,9 @@ import { CommonModule } from '@angular/common';
 import { ListboxModule } from 'primeng/listbox';
 import { RouterModule } from '@angular/router';
 import { MegaMenuModule } from 'primeng/megamenu';
+import { ConfirmDialog } from 'primeng/confirmdialog';
+import { FileUpload } from 'primeng/fileupload';
+import { HttpClientModule } from '@angular/common/http';
 
 export const commonImports = [
   FormsModule,
@@ -34,4 +37,7 @@ export const commonImports = [
   FormsModule,
   RouterModule,
   MegaMenuModule,
+  ConfirmDialog,
+  FileUpload,
+  HttpClientModule,
 ];

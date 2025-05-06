@@ -28,7 +28,23 @@ export class ProductListComponent {
     },
     {
       label: 'Clothing',
-      items: [[{ label: 'Men' }, { label: 'Women' }, { label: 'Kids' }]],
+      items: [
+        [
+          {
+            label: 'Men',
+            items: [
+              {
+                label: 'Jacket',
+              },
+              {
+                label: 'Shirt',
+              },
+            ],
+          },
+          { label: 'Women' },
+          { label: 'Kids' },
+        ],
+      ],
     },
   ];
 
